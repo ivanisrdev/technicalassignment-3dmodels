@@ -22,14 +22,27 @@
             <goals>
               <goal>install-node-and-npm</goal>
             </goals>
-            <configuration>
-              <nodeVersion>${node.version}</nodeVersion>
-              <npmVersion>${npm.version}</npmVersion>
-            </configuration>
+            <!--<configuration>-->
+              <!--<nodeVersion>${node.version}</nodeVersion>-->
+              <!--<npmVersion>${npm.version}</npmVersion>-->
+            <!--</configuration>-->
           </execution>
+
 
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.webjars</groupId>
+        <artifactId>angularjs</artifactId>
+        <version>1.7.0</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.webjars.bower</groupId>
+        <artifactId>three.js</artifactId>
+        <version>0.89.0</version>
+      </plugin>
+
     </plugins>
   </build>
 
