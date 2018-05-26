@@ -13,7 +13,6 @@
     </properties>
 
     <modules>
-        <module>3dmodels-client</module>
         <module>3dmodels-server</module>
     </modules>
 
