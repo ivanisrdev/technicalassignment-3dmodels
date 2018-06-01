@@ -1,5 +1,10 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async } from "@angular/core/testing";
 import { AppComponent } from './app.component';
+
+function describe(appComponent: string, param2: () => void) {
+  
+}
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,6 +27,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to models-client!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to models3d-client!');
   }));
 });
