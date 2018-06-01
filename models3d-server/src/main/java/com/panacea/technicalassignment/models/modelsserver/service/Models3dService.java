@@ -1,36 +1,21 @@
 package com.panacea.technicalassignment.models.modelsserver.service;
 
-import com.panacea.technicalassignment.models.modelsserver.dao.Models3dRepository;
+
 import com.panacea.technicalassignment.models.modelsserver.model.Models3d;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class Models3dService {
+public interface Models3dService {
 
-    @Autowired
-    Models3dRepository models3DRepository;
+    List<Models3d> getList();
 
-    public List<Models3d> getList() {
-        return models3DRepository.findAll();
-    }
+    Optional<Models3d> getById(long id);
 
-    public Optional<Models3d> getById(long id) {
-        return models3DRepository.findById(id);
-    }
+    void create(Models3d models3d);
 
-    public void create(Models3d models3d) {
-        models3DRepository.save(models3d);
-    }
+    Models3d update(Models3d model);
 
-    public Models3d update(Models3d model) {
-        return models3DRepository.save(model);
-    }
+    void deleteById(Long id);
 
-    public void deleteById(Long id) {
-        models3DRepository.deleteById(id);
-    }
 }
