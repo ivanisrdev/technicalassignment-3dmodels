@@ -18,7 +18,8 @@ import java.util.Date;
 public class Models3d implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @NotBlank
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
@@ -77,5 +78,22 @@ public class Models3d implements Serializable {
 
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Models3d [id=");
+        builder.append(id);
+        builder.append(", name=");
+        builder.append(name);
+        builder.append(", path=");
+        builder.append(path);
+        builder.append(", createdAt=");
+        builder.append(createdAt);
+        builder.append(", updateAt=");
+        builder.append(updateAt);
+        builder.append("]");
+        return builder.toString();
     }
 }
