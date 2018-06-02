@@ -82,18 +82,12 @@ public class Models3d implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Models3d [id=");
-        builder.append(id);
-        builder.append(", name=");
-        builder.append(name);
-        builder.append(", path=");
-        builder.append(path);
-        builder.append(", createdAt=");
-        builder.append(createdAt);
-        builder.append(", updateAt=");
-        builder.append(updateAt);
-        builder.append("]");
-        return builder.toString();
+        return "Models3d{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", path='" + path + '\'' +
+                ", createdAt=" + createdAt +
+                ", updateAt=" + updateAt +
+                '}';
     }
 }
