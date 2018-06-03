@@ -1,6 +1,8 @@
 package com.panacea.technicalassignment.models.modelsserver.model;
 
-public class Models3dDto {
+import java.io.Serializable;
+
+public class Models3dDto implements Serializable {
 
     private Long id;
     private String name;
