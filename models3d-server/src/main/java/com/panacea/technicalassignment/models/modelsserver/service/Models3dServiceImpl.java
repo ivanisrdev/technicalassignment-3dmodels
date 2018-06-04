@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class Models3dServiceImpl implements Models3dService{
@@ -19,7 +20,7 @@ public class Models3dServiceImpl implements Models3dService{
 
     public List<Models3d> findAll() { return models3DRepository.findAll(); }
 
-    public Models3d findById(long id) { return models3DRepository.findId(id); }
+    public Optional<Models3d> findById(long id) { return models3DRepository.findById(id); }
 
     public void save(Models3d models3d) { models3DRepository.save(models3d);}
 

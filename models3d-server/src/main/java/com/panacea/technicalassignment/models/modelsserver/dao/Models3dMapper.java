@@ -6,6 +6,7 @@ import com.panacea.technicalassignment.models.modelsserver.model.Models3dDto;
 import org.mapstruct.Mapper;
 
 import java.util.List;
+import java.util.Optional;
 
 @Mapper(componentModel = "spring")
 public interface Models3dMapper {
@@ -14,4 +15,5 @@ public interface Models3dMapper {
     List<Models3dDto> entityListToDtoList(List<Models3d> entityList);
     Models3d dtoToEntity(Models3dDto dto);
     List<Models3d> dtoListToEntityList(List<Models3dDto> dtoList);
+    Models3dDto entityOptionalToDto (Optional<Models3d> optionalModels3d);
 }
