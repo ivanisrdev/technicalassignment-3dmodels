@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  pathServerBackend: 'http://localhost:8080',
+  pathApiModels3d: '/api/models3d'
 };
 
 /*
