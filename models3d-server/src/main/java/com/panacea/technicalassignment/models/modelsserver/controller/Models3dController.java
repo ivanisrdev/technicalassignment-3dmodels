@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
-@RequestMapping("/api/models")
+@RequestMapping("/api/models3d")
 public class Models3dController {
 
     private final static Log _log = LogFactory.getLog(Models3dController.class);
@@ -28,8 +28,8 @@ public class Models3dController {
     Models3dMapper models3dMapper;
 
     // GET ALL MODELS3D
-    @GetMapping(value = "/listModels")
-    public List<Models3dDto> listAllModels3d() {
+    @GetMapping(value = "/allModels3d")
+    public List<Models3dDto> allModels3d() {
 
         _log.debug("----> Executed listAllModels3d <---- ");
         List<Models3dDto> models3dDtoList = models3dMapper.entityListToDtoList(models3dService.findAll());
@@ -37,11 +37,11 @@ public class Models3dController {
     }
 
     // GET BY ID MODELS3D
-    @GetMapping(value = "/listModels/{id}")
+    @GetMapping(value = "/{id}")
     public Models3dDto retrieveModels3dById(@PathVariable Long id) {
 
         _log.debug("----> Executed retrieveModels3dById <---- ");
-       Models3dDto models3dDto = models3dMapper.entityToDto(models3dService.findById(id));
+       Models3dDto models3dDto = models3dMapper.entityOptionalToDto(models3dService.findById(id));
        if(models3dDto.getId() == null)
            throw new NoSuchElementException("id-" + id);
 
@@ -50,7 +50,7 @@ public class Models3dController {
 
     // CREATE A SINGLE MODELS3D
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping(value = "/saveModels")
+    @PostMapping(value = "/")
     public void saveModel3d(@RequestBody @Valid Models3dDto models3dDto) {
 
         _log.debug("----> Executed saveModel3d <---- ");
@@ -59,7 +59,7 @@ public class Models3dController {
     }
 
     // UPDATE POST MODELS3D
-    @PutMapping("/saveModels/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Object> updateModel3dById(@RequestBody Models3dDto models3dDto, @Valid @PathVariable long id) {
 
         _log.debug("----> Executed updateModel3dById <---- ");
