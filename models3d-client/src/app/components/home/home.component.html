@@ -1,3 +1,16 @@
-<p>
-  home works!
-</p>
+<!DOCTYPE html>
+<html ng-app="home">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>3d Models Demo Upload File</title>
+</head>
+<body>
+<div data-ng-controller="HomeCtrl">
+  <mat-form-field>
+    <input matInput type="file" uploader-model="file" /> <br>
+    <input type="submit" value="Enviar">
+  </mat-form-field>
+</div>
+<script type='text/javascript' src="home.component.ts"></script>
+</body>
+</html>

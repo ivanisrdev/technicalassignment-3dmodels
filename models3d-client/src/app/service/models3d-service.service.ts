@@ -11,21 +11,21 @@ export class Models3dServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getAllModels3d(): Observable<Models3d[]> {
-    const servicePath = '/listModels';
-    const url = environment.pathServerBackend + environment.pathApiModels3d + servicePath;
-    console.log('Execute service models3d getAllModels3d(): ' + url);
-
-    return this.http.get(url) (response => <Models3d[]> response);
-  }
-
-  getByIdModels3d(id: number): Observable<Models3d> {
-    const servicePath = '/listModels?id=';
-    const url = environment.pathServerBackend + environment.pathApiModels3d + servicePath;
-    console.log('Execute service models3d getByIdModels3d(): ' + url);
-
-    return this.http.get(url) (response => <Models3d> response);
-  }
+  // getAllModels3d(): Observable<Models3d[]> {
+  //   const servicePath = '/listModels';
+  //   const url = environment.pathServerBackend + environment.pathApiModels3d + servicePath;
+  //   console.log('Execute service models3d getAllModels3d(): ' + url);
+  //
+  //   return this.http.get(url) (response => <Models3d[]> response);
+  // }
+  //
+  // getByIdModels3d(id: number): Observable<Models3d> {
+  //   const servicePath = '/listModels?id=';
+  //   const url = environment.pathServerBackend + environment.pathApiModels3d + servicePath;
+  //   console.log('Execute service models3d getByIdModels3d(): ' + url);
+  //
+  //   return this.http.get(url) (response => <Models3d> response);
+  // }
 
 
   saveModel3d(model: Models3d) {
