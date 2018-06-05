@@ -50,7 +50,7 @@ public class Models3dController {
 
     // CREATE A SINGLE MODELS3D
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping(value = "/")
+    @PostMapping(value = "/models3d")
     public void saveModel3d(@RequestBody @Valid Models3dDto models3dDto) {
 
         _log.debug("----> Executed saveModel3d <---- ");
