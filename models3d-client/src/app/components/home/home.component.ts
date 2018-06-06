@@ -1,5 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {Models3dServiceService} from '../../service/models3d-service.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +6,10 @@ import {Models3dServiceService} from '../../service/models3d-service.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  _service: Models3dServiceService;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
   }
 
-  readFile(event): void {
-    const formData = new FormData();
-    if (event.target.files && event.target.files.length > 0) {
-      const file = event.target.files[0];
-
-    }
-  }
 }

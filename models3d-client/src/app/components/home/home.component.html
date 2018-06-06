@@ -6,13 +6,11 @@
 </head>
 <body>
 <div data-ng-controller="HomeCtrl">
-  <span><h1>Upload 3d Models</h1></span>
-  <h2>File supported: OBJ format & MTL files</h2>
   <mat-form-field>
-    <mat-label></mat-label>
-      <input type="file" accept=".obj,.mtl" uploader-model="file"/> <br>
-      <input type="submit" value="Enviar">
+    <input matInput type="file" uploader-model="file" /> <br>
+    <input type="submit" value="Enviar">
   </mat-form-field>
 </div>
+<script type='text/javascript' src="home.component.ts"></script>
 </body>
 </html>
