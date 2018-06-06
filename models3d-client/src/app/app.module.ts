@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListCardComponent } from './components/list-card/list-card.component';
 import { Models3dComponent } from './components/models3d/models3d.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -13,13 +14,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListCardComponent,
-    Models3dComponent
+    Models3dComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

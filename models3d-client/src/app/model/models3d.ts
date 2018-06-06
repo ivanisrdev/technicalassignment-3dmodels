@@ -6,8 +6,7 @@ export class Models3d {
   private _createAt: Date;
   private _updateAt: Date;
 
-  constructor(id: number, name: string, path: string, createAt: Date, updateAt: Date){
-    this._id = id;
+  constructor(name: string, path: string, createAt: Date, updateAt: Date) {
     this._name = name;
     this._path = path;
     this._createAt = createAt;

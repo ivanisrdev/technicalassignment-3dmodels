@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
-import 'rxjs/add/operator/map';
 import {HttpClient} from '@angular/common/http';
 import {Models3d} from '../model/models3d';
 import {Observable} from 'rxjs';
@@ -28,13 +27,13 @@ export class Models3dServiceService {
   // }
 
 
-  saveModel3d(model: Models3d) {
-    const servicePath = '/saveModels';
+  saveModel3d() {
+    const servicePath = '/models';
 
   }
 
   updateModel3dById(model: Models3d, id: number) {
-    const servicePath = '/saveModels?id=';
+    const servicePath = '/id=';
 
   }
 
