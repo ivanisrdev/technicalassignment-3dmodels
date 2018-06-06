@@ -5,12 +5,11 @@
   <title>3d Models Demo Upload File</title>
 </head>
 <body>
-<div data-ng-controller="HomeCtrl">
-  <mat-form-field>
-    <input matInput type="file" uploader-model="file" /> <br>
-    <input type="submit" value="Enviar">
-  </mat-form-field>
+<div>
+  <span><h1>Upload 3d Models</h1></span>
+  <h2>File supported: OBJ Format & MTL Files</h2>
+    <input matInput type="file" accept=".obj,.mtl" uploader-model="file" /> <br>
+    <input type="submit" value="Submit">
 </div>
-<script type='text/javascript' src="home.component.ts"></script>
 </body>
 </html>
